@@ -30,9 +30,9 @@ function addData() {
 
 // remove admin
 function removeAdmin() {
-arr =  arr.filter((employee)=>
+let arr1 =  arr.filter((employee)=>
   employee.profession!='admin')
-console.log(arr);
+console.log(arr1);
 
 };
 
@@ -40,8 +40,8 @@ console.log(arr);
 function concatenateArray() {
   let newArr = [
     { id: 5, name: 'Subhadeep', age: 25, profession: 'developer' },
-  { id: 6, name: 'Vishal', age: 24, profession: 'Quality Head' }
-  ];
+  { id: 6, name: 'Vishal', age: 24, profession: 'Quality Head' }]
+  ;
   
   arr=arr.concat(newArr);
   console.log(arr);
