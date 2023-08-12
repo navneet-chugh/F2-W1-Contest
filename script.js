@@ -21,7 +21,7 @@ function PrintDeveloper() {
 function addData() {
 
   arr.push({
-    id: 4, name: 'Shruti', age: 23 , profession: 'marketing head'
+    id: 4, name: 'Shruti', age: 23 , profession: 'developer'
   });
   
   console.log(arr);
@@ -40,7 +40,7 @@ console.log(arr);
 function concatenateArray() {
   let newArr = [
     { id: 5, name: 'Subhadeep', age: 25, profession: 'developer' },
-  { id: 8, name: 'Vishal', age: 24, profession: 'Quality Head' }
+  { id: 6, name: 'Vishal', age: 24, profession: 'Quality Head' }
   ];
   
   arr=arr.concat(newArr);
