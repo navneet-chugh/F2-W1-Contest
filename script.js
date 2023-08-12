@@ -1,46 +1,58 @@
 let arr = [
-    { id: 1, name: 'john', age: 18, profession: 'developer' },
-    { id: 2, name: 'jack', age: 20, profession: 'developer' },
-    { id: 3, name: 'karen', age: 19, profession: 'admin' },
+  { id: 1, name: 'Navneet', age: 26, profession: 'developer' },
+  { id: 2, name: 'Priyanka', age: 26, profession: 'developer' },
+  { id: 3, name: 'Chumki', age: 19, profession: 'admin' },
+];
+
+// Don't worry about consoling these functions, they are already being called on the button clicks.
+// Please don't change anything in the index.html file.
+
+
+// printing only develpoers
+function PrintDeveloper() {
+  console.log(arr.filter((employee)=>
+  employee.profession==='developer')
+)
+};
+
+
+//pushing one employee
+
+function addData() {
+
+  arr.push({
+    id: 4, name: 'Shruti', age: 23 , profession: 'marketing head'
+  });
+  
+  console.log(arr);
+}
+
+
+// remove admin
+function removeAdmin() {
+arr =  arr.filter((employee)=>
+  employee.profession!='admin')
+console.log(arr);
+
+};
+
+// append another array in main array
+function concatenateArray() {
+  let newArr = [
+    { id: 5, name: 'Subhadeep', age: 25, profession: 'developer' },
+  { id: 8, name: 'Vishal', age: 24, profession: 'Quality Head' }
   ];
   
-  // Don't worry about consoling these functions, they are already being called on the button clicks.
-  // Please don't change anything in the index.html file.
-  
-  function PrintDeveloper() {
-    //Write your code here , just console.log
-    const developers = arr.filter(person => person.profession === 'developer');
-  console.log('Developers:', developers);
-  }
-  
-  function addData() {
-    //Write your code here, just console.log
-    const newData = { id: 4, name: 'susan', age: 20, profession: 'intern' };
-  arr.push(newData);
-  console.log('New data added:', newData);
-  }
-  
-  function removeAdmin() {
-    //Write your code here, just console.log
-    const nonAdmins = arr.filter(person => person.profession !== 'admin');
-    console.log('Array without admins:', nonAdmins);
-  }
-  
-  function concatenateArray() {
-    //Write your code here, just console.log
-    const newArray = arr.concat([
-        { id: 5, name: 'jessica', age: 25, profession: 'manager' },
-        { id: 6, name: 'peter', age: 23, profession: 'developer' }
-      ]);
-      console.log('Concatenated array:', newArray);
-    
-  }
-  
-  // Here is an example of how functions work,
-  // basically a function is a block of code which can directly access your 'arr' variable since arr is global.
-  // If I have a function called consoleArr(), that can directly access arr like this to console it.
-  
-  function consoleArr() {
-    console.log('Consoling Array Variable', arr);
-    // Over here I can directly access the variable.
-  }
+  arr=arr.concat(newArr);
+  console.log(arr);
+}
+
+
+// Here is an example of how functions work,
+// basically a function is a block of code which can directly access your 'arr' variable since arr is global.
+// If I have a function called consoleArr(), that can directly access arr like this to console it.
+
+function consoleArr() {
+  console.log('Consoling Array Variable', arr);
+  // Over here I can directly access the variable.
+}
